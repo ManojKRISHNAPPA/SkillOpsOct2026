@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0a1020">
+    <meta
+      name="description"
+      content="A practical guide to improving deployment precision with repeatable pipelines, automated checks, and observable releases."
+    >
+    <title>Deploy with Precision | DevOps Field Guide</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Deploy with Precision home">
+          <span class="brand-mark" aria-hidden="true">D<span>/</span></span>
+          <span>FIELDNOTES<span class="brand-divider">/</span>DEVOPS</span>
+        </a>
+        <nav class="top-nav" aria-label="Main navigation">
+          <a href="#principles">Principles</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#checklist">Checklist</a>
+        </nav>
+        <a class="nav-cta" href="#checklist">Ship with confidence <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="status-dot"></span> THE DEPLOYMENT PLAYBOOK</p>
+            <h1 id="hero-title">Make every release<br>feel <span>predictable.</span></h1>
+            <p class="hero-description">
+              Deployment precision is not about moving slower. It is about building a
+              delivery system that makes the right change, at the right time, with
+              evidence at every step.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#workflow">Explore the workflow <span aria-hidden="true">↓</span></a>
+              <span class="hero-note"><span class="tiny-check">✓</span> Repeatable by design</span>
+            </div>
+            <div class="hero-stats" aria-label="Deployment principles">
+              <div><strong>01</strong><span>One source<br>of truth</span></div>
+              <div><strong>02</strong><span>Automated<br>quality gates</span></div>
+              <div><strong>03</strong><span>Visible<br>outcomes</span></div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="A deployment pipeline passing through quality checks">
+            <div class="visual-glow"></div>
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="pipeline-card glass-card">
+              <div class="pipeline-header">
+                <div>
+                  <span class="card-kicker">RELEASE PIPELINE</span>
+                  <h2>Production deploy</h2>
+                </div>
+                <span class="live-pill"><span></span> HEALTHY</span>
+              </div>
+              <div class="pipeline-track">
+                <div class="pipeline-step complete">
+                  <span class="step-icon">✓</span>
+                  <div><strong>Commit</strong><small>Change recorded</small></div>
+                  <span class="step-time">00:12</span>
+                </div>
+                <div class="track-line"></div>
+                <div class="pipeline-step complete">
+                  <span class="step-icon">✓</span>
+                  <div><strong>Verify</strong><small>Tests &amp; scans pass</small></div>
+                  <span class="step-time">02:48</span>
+                </div>
+                <div class="track-line"></div>
+                <div class="pipeline-step active">
+                  <span class="step-icon">↗</span>
+                  <div><strong>Release</strong><small>Progressive rollout</small></div>
+                  <span class="step-time">LIVE</span>
+                </div>
+              </div>
+              <div class="pipeline-footer">
+                <span><span class="footer-dot"></span> Metrics within SLO</span>
+                <span>build #1842</span>
+              </div>
+            </div>
+            <div class="floating-note note-top glass-card">
+              <span class="note-icon">✓</span><span><strong>Checks passed</strong><small>All required gates</small></span>
+            </div>
+            <div class="floating-note note-bottom glass-card">
+              <span class="note-icon note-icon-purple">↗</span><span><strong>Small batch</strong><small>Risk stays contained</small></span>
+            </div>
+            <span class="visual-caption">FROM COMMIT TO CONFIDENCE <span>—</span> EVERY TIME</span>
+          </div>
+        </section>
+
+        <section class="principles-section" id="principles" aria-labelledby="principles-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">THE PRECISION LOOP</p>
+              <h2 id="principles-title">Reduce guesswork.<br><span>Increase signal.</span></h2>
+            </div>
+            <p>Reliable releases come from a few strong habits repeated consistently—not a last-minute checklist.</p>
+          </div>
+          <div class="principle-grid">
+            <article class="principle-card glass-card">
+              <span class="card-index">01 / DEFINE</span>
+              <div class="principle-icon icon-cyan" aria-hidden="true">⌘</div>
+              <h3>Make changes traceable</h3>
+              <p>Keep code, configuration, and infrastructure in version control. Link each release to a reviewed commit and a clear owner.</p>
+              <a href="#workflow">Start with source control <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="principle-card glass-card">
+              <span class="card-index">02 / VERIFY</span>
+              <div class="principle-icon icon-violet" aria-hidden="true">◎</div>
+              <h3>Automate the guardrails</h3>
+              <p>Run tests, security checks, and policy validation in the pipeline. Promote only artifacts that meet the same agreed criteria.</p>
+              <a href="#workflow">Build quality gates <span aria-hidden="true">↗</span></a>
+            </article>
+            <article class="principle-card glass-card">
+              <span class="card-index">03 / OBSERVE</span>
+              <div class="principle-icon icon-green" aria-hidden="true">⌁</div>
+              <h3>Release with feedback</h3>
+              <p>Roll out gradually, watch service-level indicators, and make rollback or pause decisions based on defined thresholds.</p>
+              <a href="#checklist">Improve release health <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+        </section>
+
+        <section class="workflow-section" id="workflow" aria-labelledby="workflow-title">
+          <div class="workflow-intro">
+            <p class="eyebrow">A RELEASE YOU CAN REPEAT</p>
+            <h2 id="workflow-title">Precision, built into<br><span>the path to production.</span></h2>
+            <p>Each stage produces evidence for the next. Fewer manual handoffs mean fewer surprises.</p>
+            <a class="text-link" href="#checklist">See the practical checklist <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="workflow-list">
+            <article class="workflow-item">
+              <span class="workflow-number">01</span>
+              <div><h3>Commit a small, reviewed change</h3><p>Use short-lived branches, peer review, and clear change descriptions.</p></div>
+              <span class="workflow-tag">TRACEABLE</span>
+            </article>
+            <article class="workflow-item">
+              <span class="workflow-number">02</span>
+              <div><h3>Build once, test automatically</h3><p>Run unit, integration, and security checks; keep the artifact immutable.</p></div>
+              <span class="workflow-tag">VERIFIED</span>
+            </article>
+            <article class="workflow-item">
+              <span class="workflow-number">03</span>
+              <div><h3>Promote through environments</h3><p>Deploy the same artifact with environment-specific configuration.</p></div>
+              <span class="workflow-tag">CONSISTENT</span>
+            </article>
+            <article class="workflow-item">
+              <span class="workflow-number">04</span>
+              <div><h3>Roll out gradually and observe</h3><p>Use canary or phased releases, health checks, and actionable alerts.</p></div>
+              <span class="workflow-tag">MEASURED</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="checklist-section glass-card" id="checklist" aria-labelledby="checklist-title">
+          <div class="checklist-heading">
+            <div>
+              <p class="eyebrow">BEFORE YOU SHIP</p>
+              <h2 id="checklist-title">A calmer release starts here.</h2>
+            </div>
+            <span class="checklist-label"><span class="status-dot"></span> QUICK CHECK</span>
+          </div>
+          <div class="checklist-grid">
+            <div class="check-item"><span>✓</span><p>Is the change reviewed and linked to a ticket?</p></div>
+            <div class="check-item"><span>✓</span><p>Did automated tests and security checks pass?</p></div>
+            <div class="check-item"><span>✓</span><p>Is the exact artifact promoted across environments?</p></div>
+            <div class="check-item"><span>✓</span><p>Are health signals and rollback steps ready?</p></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <a class="brand" href="#" aria-label="Back to top">
+          <span class="brand-mark" aria-hidden="true">D<span>/</span></span>
+          <span>FIELDNOTES<span class="brand-divider">/</span>DEVOPS</span>
+        </a>
+        <p>Good releases are engineered, not improvised.</p>
+        <a class="back-to-top" href="#" aria-label="Back to top">↑</a>
+      </footer>
+    </div>
+  </body>
+</html>
