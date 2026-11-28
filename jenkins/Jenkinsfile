@@ -13,9 +13,16 @@ pipeline{
       steps{
         sh '''
 
-          echo "Hello"
+          echo "bye"
         '''
       }
+      steps{
+        sh '''
+
+          echo "this is from feature/test-1"
+        '''
+      }
+      
     }
   }
 }
